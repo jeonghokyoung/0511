@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 클릭(커서올림)했을때 보라색은 함수(기능) 파란색은 속성(변수)
+    // document.title="나의 도큐먼터";
+    // document.write("hello<br>");
+    // document.write("<button>버튼</button>");
+    function changeColor(){
+      // document.getElementById("h1").style.color="red";
+      var obj = document.getElementById("h1");
+      obj.style.color='red';
+      obj.style.backgroundColor="yellow";
+    }
+    function changeColor(c){
+      document.getElementById("h1").style.color=c;
+    }
+  </script>
+</head>
+<body>
+    <!-- <h1 id ="h1" style="color: green;" onmouseover="changeColor('orange')" onmouseout="changeColor('black')">JAVASCRIPT</h1> -->
+    <h1 id ="h1" style="color: green;">JAVASCRIPT</h1>
+    <input type="button" value="색변경" onclick="changeColor()" onmouseover="this.style.color='yellow'" onmouseout="this.style.color='black'">
+    <input type="button" value="빨강색" onclick="changeColor('red')">
+    <input type="button" value="노랑색" onclick="changeColor('yellow')">
+    <!-- <script>document.getElementById("h1").style.color="red";</script> -->
+</body>
+</html>

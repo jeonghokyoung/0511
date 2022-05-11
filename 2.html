@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let w1,w2,w3;
+    function twowindows(){
+      w1=window.open("http://naver.com");
+      w2=window.open("http://google.com");
+      w3=window.open("http://google.com","_blank","width=200, height=200");
+      // window객체     open : 객체에 들어가는 함수 
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="윈도우호출" onclick="twowindows()">
+  <input type="button" value="윈도우닫기1" onclick="w1.close()">
+  <input type="button" value="윈도우닫기2" onclick="w2.close()">
+  <input type="button" value="윈도우닫기3" onclick="w3.close()">
+  <input type="button" value="윈도우닫기 모두" onclick="w1.close(),w2.close(),w3.close()">
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    
+    var loginId=document.getElementById("id");
+    var loginPass=document.getElementById("password");
+
+    /*
+    제약조건 1. id, password 하나라도 비어있으면 안됨
+    2. id pass 길이 확인, 문자 확인(아이디 첫번째 대문자, 특수기호포함 등)
+    */
+   //만약에 id있는값 password값 둘중에 하나라도 비어있다면 오류메세지를띄워준다.
+    function login(){
+      var loginId=document.getElementById("id")
+      var loginPass=document.getElementById("password")
+
+      if(loginId.value==="" || loginPass.value===""){
+        alert("아이디 또는 비번을 확인하세요!!")
+      }else if(loginId.value.length <4 || loginId.value.length >8){
+        alert("아이디 길이를 확인하세요 :)")
+      }else if(loginPass.value.length < 8 || loginPass.value.length > 15 ){
+        alert("비밀번호 길이를 확인하세요 :)")
+      }else{
+        //로그인이 성공했을 경우
+        document.getElementById("form").submit();
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <form id="form" action="string.html">
+    아이디:
+    <input type="text" name="id" id ="id" value="아이디">
+    패스워드:
+    <input type="password" name="password" id="password">
+    <input type="button" value="로그인" onclick="login()">
+  </form>
+</body>
+</html>
